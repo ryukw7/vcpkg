@@ -19,6 +19,8 @@ pkgs = [
   'toml11',
 ]
 
+run('./bootstrap-vcpkg.sh')
+
 pkgs.each do |pkg|
   cmd = "./vcpkg install #{pkg}"
   run(cmd)
