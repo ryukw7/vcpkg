@@ -8,6 +8,8 @@ def run cmd
 end
 
 pkgs = [
+  'abseil',
+  'catch2',
   'magic-enum',
   'nameof',
   'openssl',
