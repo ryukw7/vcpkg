@@ -17,6 +17,7 @@ pkgs = [
   'toml11',
 ]
 
-pkg.each do |pkg|
-  cmd = "./vcpkg install #{pkg}'"
+pkgs.each do |pkg|
+  cmd = "./vcpkg install #{pkg}"
+  run(cmd)
 end
