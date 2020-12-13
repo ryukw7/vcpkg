@@ -10,6 +10,7 @@ end
 pkgs = [
   'abseil',
   'catch2',
+  'cxxopts',
   'magic-enum',
   'nameof',
   'openssl',
