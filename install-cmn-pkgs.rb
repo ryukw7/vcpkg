@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+require 'os'
 
 def run cmd
   puts "=============== execute: #{cmd}"
@@ -20,7 +21,11 @@ pkgs = [
   'toml11',
 ]
 
-run('./bootstrap-vcpkg.sh')
+if OS.windows?
+  run('bootstrap-vcpkg.bat')
+elsif
+  run('./bootstrap-vcpkg.sh')
+end
 
 pkgs.each do |pkg|
   cmd = "./vcpkg install #{pkg}"
