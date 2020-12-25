@@ -19,6 +19,7 @@ pkgs = [
   'pugixml',
   'sqlite3',
   'toml11',
+  'fmt',
 ]
 
 if OS.windows?
