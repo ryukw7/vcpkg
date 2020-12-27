@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'os'
+# require 'os'
 
 def run cmd
   puts "=============== execute: #{cmd}"
@@ -20,13 +20,14 @@ pkgs = [
   'sqlite3',
   'toml11',
   'fmt',
+  'indicators',
 ]
 
-if OS.windows?
-  run('bootstrap-vcpkg.bat')
-elsif
-  run('./bootstrap-vcpkg.sh')
-end
+# if OS.windows?
+#   run('bootstrap-vcpkg.bat')
+# elsif
+#   run('./bootstrap-vcpkg.sh')
+# end
 
 pkgs.each do |pkg|
   cmd = "./vcpkg install #{pkg}"
